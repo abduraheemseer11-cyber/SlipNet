@@ -12,10 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code with submodules
+    # 1. سحب الكود الأساسي فقط بدون الـ submodules
+    - name: Checkout code
       uses: actions/checkout@v4
       with:
-        submodules: recursive
+        submodules: false
+
+    # 2. تحديث الـ submodules إلى أحدث إصدار متاح (تجاهل الإصدارات القديمة المفقودة)
+    - name: Update submodules to latest
+      run: |
+        git submodule sync --recursive
+        git submodule update --init --recursive --remote
 
     - name: Set up JDK 21
       uses: actions/setup-java@v4
