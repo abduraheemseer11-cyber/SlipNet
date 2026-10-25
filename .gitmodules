@@ -6,7 +6,7 @@
 	url = https://github.com/Fox-Fig/slipstream-rust-plus
 [submodule "dnstt-mobile"]
 	path = dnstt-mobile
-	url = https://github.com/anonvector/dnstt-mobile.git
+	url = https://github.com/UnboundTechCo/dnstt-mobile.git
 [submodule "dnstt"]
 	path = dnstt
 	url = https://github.com/anonvector/dnstt.git
